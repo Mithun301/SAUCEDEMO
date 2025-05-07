@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","38929"," LogIn and Product Purchase1 ","","Wed May 07 19:30:01 BDT 2025","passed","Wed May 07 19:30:40 BDT 2025","","SauceDemo site Automation journey","",""
+"","31591"," LogIn and Product Purchase ","","Wed May 07 19:30:01 BDT 2025","passed","Wed May 07 19:30:33 BDT 2025","","SauceDemo site Automation journey","",""
+"","3586","Try LogIn and verify the message ","","Wed May 07 19:30:01 BDT 2025","passed","Wed May 07 19:30:05 BDT 2025","","SauceDemo site Automation journey","",""
