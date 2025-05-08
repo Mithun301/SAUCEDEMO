@@ -47,8 +47,10 @@ Automated test suite for the SauceDemo e-commerce website. This project demonstr
 3. Allure Report installed
 
 **Installation**
+
 *WDIo*
-npm init -y
+
+'npm init -y'
 
 npm i --save-dev @wdio/cli
 
@@ -62,6 +64,7 @@ npm i allure-commandline
 
 
 *configaration*
+
 export const config = {
     // ...
     reporters: [['allure', {
