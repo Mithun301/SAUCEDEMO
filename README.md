@@ -4,7 +4,7 @@
 
 Automated test suite for the SauceDemo e-commerce website. This project demonstrates UI testing workflows.
 ## Table of Contents
-    -**Features**
+    **Features**
 
     -*Tech Stack
 
