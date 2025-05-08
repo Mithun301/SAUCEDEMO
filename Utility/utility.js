@@ -46,7 +46,15 @@ class Utility {
         await browser.pause(3000);
 
     }
-    async verifyProductPrice(){
+    async verifyProductName1(){
+        const productElements1= await $('//div[@class="inventory_item_name" and text()="Test.allTheThings() T-Shirt (Red)"]');
+        const productName1 = await productElements1.getText();
+        const productElements2 = await $('//div[@class="inventory_item_name"]');
+        const productName2 = await productElements2.getText();
+        expect(productName2).toEqual(productName1);
+
+
+
 
         
     }

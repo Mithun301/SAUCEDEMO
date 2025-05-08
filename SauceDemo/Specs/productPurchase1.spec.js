@@ -17,6 +17,7 @@ describe("SauceDemo site Automation journey", () => {
         await productPurchaseActions.selectResetApp();
         await productPurchaseActions.clickCross();
         await productPurchaseActions.clickSort();
+        await browser.pause(3000);
         await productPurchaseActions.productAdd();
         await productPurchaseActions.clickCartIcon();
         await browser.pause(3000);
@@ -24,7 +25,8 @@ describe("SauceDemo site Automation journey", () => {
         await productPurchaseActions.enterfirstName(FirstName);
         await productPurchaseActions.enterlastName(LastName);
         await productPurchaseActions.enterZip(Zip);
-        await productPurchaseActions.clickContinue();        
+        await productPurchaseActions.clickContinue();     
+        await utility.verifyProductName1();   
         await productPurchaseActions.clickFinish();
         await browser.pause(3000);
         await utility.verifyMessage1();

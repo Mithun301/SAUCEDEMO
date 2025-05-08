@@ -12,7 +12,7 @@ class ProductPurchaseLocators{
         return $('//select[@data-test="product-sort-container"]');
     }
     get Addproduct(){
-        return $('//button[@data-test="add-to-cart-sauce-labs-backpack"]');
+        return $('//button[@data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]');
     }
     get product1(){
         return $("//button[@data-test='add-to-cart-sauce-labs-backpack']");
