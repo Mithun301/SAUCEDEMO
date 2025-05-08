@@ -65,13 +65,13 @@ Automated test suite for the SauceDemo e-commerce website. This project demonstr
 
 *configaration*
 
-```(export const config = {`
-   ` reporters: [['allure', {`
-      `  outputDir: 'allure-results',`
-      `  disableWebdriverStepsReporting: true,`
-       ` disableWebdriverScreenshotsReporting: true,`
-  ` }]],`
-    ```})```
+(export const config = {
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+   }]],
+    })
 
 
 
@@ -79,10 +79,12 @@ Automated test suite for the SauceDemo e-commerce website. This project demonstr
 **Run**
 
 *WDIo*
-npx wdio run ./wdio.conf.js
+
+```npx wdio run ./wdio.conf.js```
 
 *Report*
-allure generate  allure-results --clean && allure open allure-report
+
+```allure generate  allure-results --clean && allure open allure-report```
 
 
 

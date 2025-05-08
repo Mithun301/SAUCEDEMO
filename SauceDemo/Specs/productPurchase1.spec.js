@@ -24,7 +24,7 @@ describe("SauceDemo site Automation journey", () => {
         await productPurchaseActions.enterfirstName(FirstName);
         await productPurchaseActions.enterlastName(LastName);
         await productPurchaseActions.enterZip(Zip);
-        await productPurchaseActions.clickContinue();
+        await productPurchaseActions.clickContinue();        
         await productPurchaseActions.clickFinish();
         await browser.pause(3000);
         await utility.verifyMessage1();
