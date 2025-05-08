@@ -4,9 +4,9 @@
 
 Automated test suite for the SauceDemo e-commerce website. This project demonstrates UI testing workflows.
 ## Table of Contents
-    **Features**
+**Features**
 
-    -*Tech Stack
+*Tech Stack
 
     -*Getting Started
 
@@ -23,9 +23,9 @@ Automated test suite for the SauceDemo e-commerce website. This project demonstr
     Contact
 
 ## Features
-Automated login, add-to-cart, checkout, and logout flows (valid/invalid users)
+    Automated login, add-to-cart, checkout, and logout flows (valid/invalid users)
 
-UI validation and functional test coverage
+    UI validation and functional test coverage
 
-Verify Some messages , Product Name on the cart, Pruchase product total price.
+    Verify Some messages , Product Name on the cart, Pruchase product total price.
 
