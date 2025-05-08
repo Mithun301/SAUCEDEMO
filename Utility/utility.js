@@ -1,6 +1,4 @@
-const loginLocators = require("../SauceDemo/Pages/login/loginLocators");
-const productPurchaseActions = require("../SauceDemo/Pages/productPurchase/productPurchaseActions");
-
+const Taxrate = 0.0801;
 class Utility {
     async convertTextToNumber(text) {
       const value = parseFloat(text.replace(/[^\d.]/g, ""));
@@ -51,12 +49,48 @@ class Utility {
         const productName1 = await productElements1.getText();
         const productElements2 = await $('//div[@class="inventory_item_name"]');
         const productName2 = await productElements2.getText();
-        expect(productName2).toEqual(productName1);
+        expect(productName2).toEqual(productName1);   
+    }
+    async verifyProductPrice(){
+        const product1Price = await $("//div[contains(@class, 'inventory_item_price') and text()='29.99']");
+        const getsingleProductPrice1 = await product1Price.getText();
+        const SinglePrice1 = await this.convertTextToNumber(getsingleProductPrice1);
 
+        const product2Price = await $("//div[contains(@class, 'inventory_item_price') and text()='9.99']");
+        const getsingleProductPrice2 = await product2Price.getText();
+        const SinglePrice2 = await this.convertTextToNumber(getsingleProductPrice2);
 
+        const product3Price = await $("//div[contains(@class, 'inventory_item_price') and text()='15.99']");
+        const getsingleProductPrice3 = await product3Price.getText();
+        const SinglePrice3 = await this.convertTextToNumber(getsingleProductPrice3);
 
-
+        const SubTotalPrice = SinglePrice1 + SinglePrice2 + SinglePrice3 ;
+        const Tax = SubTotalPrice *  Taxrate ;
+        const TotalPrice = SubTotalPrice + Tax;
+        const expectedTotalPrice = parseFloat(TotalPrice.toFixed(2));
+        const PriceValue = await $("//div[@data-test='total-label']");
+        const TotalPriceAmount= await PriceValue.getText();
+        const actualTotalPrice = await this.convertTextToNumber(TotalPriceAmount);
         
+        expect(expectedTotalPrice).toEqual(actualTotalPrice);
+
+    }
+    async verifyProductPrice1(){
+
+        const productPrice = await $("//div[contains(@class, 'inventory_item_price') and text()='15.99']");
+        const getproductPrice = await productPrice.getText();
+        const ItemPrice = await this.convertTextToNumber(getproductPrice);
+        const tax = ItemPrice * Taxrate;
+        const  Price = ItemPrice + tax ;
+        const expectedPrice = parseFloat(Price.toFixed(2));
+        const price = await $("//div[@data-test='total-label']");
+        const getPrice = await price.getText();
+        const ActualPrice = await this.convertTextToNumber(getPrice);
+        expect(expectedPrice).toEqual(ActualPrice);
+
+
+
+
     }
     
 }module.exports = new Utility();

@@ -27,6 +27,7 @@ describe("SauceDemo site Automation journey", () => {
         await productPurchaseActions.enterZip(Zip);
         await productPurchaseActions.clickContinue();     
         await utility.verifyProductName1();   
+        await utility.verifyProductPrice1();
         await productPurchaseActions.clickFinish();
         await browser.pause(3000);
         await utility.verifyMessage1();

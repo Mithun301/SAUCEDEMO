@@ -29,12 +29,7 @@ describe("SauceDemo site Automation journey", () => {
         await productPurchaseActions.enterZip(Zip);
         await productPurchaseActions.clickContinue();
         await utility.verifyProductName();       
-        const SinglePrice1 = await productPurchaseActions.singleProductPrice1();
-        const SinglePrice2 = await productPurchaseActions.singleProductPrice2();
-        const SinglePrice3 = await productPurchaseActions.singleProductPrice3();
-        const expectedTotalPrice = SinglePrice1 + SinglePrice2 + SinglePrice3+ 4.48 ;
-        const actualTotalPrice = await productPurchaseActions.TotalPriceAmount();
-        expect(expectedTotalPrice).toEqual(actualTotalPrice);
+        await utility.verifyProductPrice();
         await browser.pause(3000);
         await productPurchaseActions.clickFinish();
         await browser.pause(3000);
