@@ -52,27 +52,26 @@ Automated test suite for the SauceDemo e-commerce website. This project demonstr
 
 ```npm init -y```
 
-npm i --save-dev @wdio/cli
+```npm i --save-dev @wdio/cli```
 
-npm init wdio@latest .
+```npm init wdio@latest .```
 
 *Allure*
 
-npm install @wdio/allure-reporter --save-dev
+```npm install @wdio/allure-reporter --save-dev```
 
-npm i allure-commandline
+```npm i allure-commandline```
 
 
 *configaration*
 
-export const config = {
-    // ...
-    reporters: [['allure', {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: true,
-    }]],
-}
+```(export const config = {`
+   ` reporters: [['allure', {`
+      `  outputDir: 'allure-results',`
+      `  disableWebdriverStepsReporting: true,`
+       ` disableWebdriverScreenshotsReporting: true,`
+  ` }]],`
+    ```})```
 
 
 
