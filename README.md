@@ -51,8 +51,12 @@ Automated test suite for the SauceDemo e-commerce website.
 *WDIo*
 
 ```npm init -y
+```
+```
 
    npm i --save-dev @wdio/cli
+```
+```
 
    npm init wdio@latest .
 ```
