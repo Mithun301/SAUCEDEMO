@@ -63,11 +63,13 @@ Automated test suite for the SauceDemo e-commerce website.
 ```
 *Allure*
 
-``` npm install @wdio/allure-reporter --save-dev
+```
+     npm install @wdio/allure-reporter --save-dev
 ```
 
 
-``` npm i allure-commandline
+```
+       npm i allure-commandline
 ```
 
 
@@ -92,15 +94,15 @@ Automated test suite for the SauceDemo e-commerce website.
 
 *WDIo*
 
-```  npx wdio run ./wdio.conf.js
-
+``` 
+     npx wdio run ./wdio.conf.js
 ```
 
 
 *Report*
 
-``` allure generate  allure-results --clean && allure open allure-report
-
+```
+     allure generate  allure-results --clean && allure open allure-report
 ```
 
 

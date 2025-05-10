@@ -1,4 +1,3 @@
-const utility = require("../../../Utility/utility");
 const productPurchaseLocators =  require("./productPurchaseLocators");
 class ProductPurchaseActions{
     async clickMenu(){
@@ -55,26 +54,6 @@ class ProductPurchaseActions{
     async clickLogOut(){
         await productPurchaseLocators.logout.click();
     }
-    async singleProductPrice1(){
-        const productPrice1 = await productPurchaseLocators.product1Price.getText();
-        const priceIntoNumber = await utility.convertTextToNumber(productPrice1);
-        return priceIntoNumber;
-    }
-    async singleProductPrice2(){
-        const productPrice2 = await productPurchaseLocators.product2Price.getText();
-        const priceIntoNumber = await utility.convertTextToNumber(productPrice2);
-        return priceIntoNumber;
-
-    }
-    async singleProductPrice3(){
-        const productPrice3 = await productPurchaseLocators.product3Price.getText();
-        const priceIntoNumber = await utility.convertTextToNumber(productPrice3);
-        return priceIntoNumber;
-    }
-    async TotalPriceAmount(){
-        const TotalPrice = await productPurchaseLocators.getTotalPrice.getText();
-        const priceIntoNumber = await utility.convertTextToNumber(TotalPrice);
-        return  priceIntoNumber;
-    }
+    
 }
 module.exports = new ProductPurchaseActions();
