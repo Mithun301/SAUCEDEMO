@@ -14,8 +14,6 @@ Automated test suite for the SauceDemo e-commerce website.
 
 **Contributing**
 
-**License**
-
 **Contact**
 
 ## Features
@@ -124,10 +122,6 @@ Want to improve or add more test cases?
 
 4. Open a Pull Request
 
-
-## License
-This project is licensed under the MIT License.
-See the LICENSE file for more info.
 
 ## Contact
 Developed and maintained by @Mithun301.
