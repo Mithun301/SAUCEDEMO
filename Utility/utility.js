@@ -88,9 +88,24 @@ class Utility {
         const ActualPrice = await this.convertTextToNumber(getPrice);
         expect(expectedPrice).toEqual(ActualPrice);
 
-
-
-
     }
     
+    async randomNumber(lenght){
+        const number = "0123456789";
+        let result1 = "";
+        for (let i=0;i <lenght;i++){
+            result1 += number.charAt (Math.floor(Math.random() * number.length ));
+        }
+        return result1;
+    }
+
+    async createRandomString(length) {
+        const chars = "abcdefghijklmnopqrstuvwxyz";
+        let result = "";
+        for (let i = 0; i < length; i++) {
+          result += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return result;
+      }
+
 }module.exports = new Utility();

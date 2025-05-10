@@ -26,16 +26,16 @@ exports.config = {
     //
     specs: [LogIn, ProductPurchaseJourney1,ProductPurchaseJourney2],
     suites: {
-        purchase : [[LogIn,ProductPurchaseJourney1,ProductPurchaseJourney2]],
+       purchase : [[LogIn,ProductPurchaseJourney1,ProductPurchaseJourney2]],
         
    },
 
-  //  specs: [
+    specs: [
 
-        //'SauceDemo/Specs/login.specs.js'
+      //  'SauceDemo/Specs/login.specs.js'
         //'SauceDemo/Specs/productPurchase.specs.js'
-       //'SauceDemo/Specs/productPurchase1.spec.js'
-  //  ],
+      // 'SauceDemo/Specs/productPurchase1.spec.js'
+    ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'

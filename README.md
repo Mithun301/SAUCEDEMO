@@ -2,7 +2,7 @@
 
 ## LogIn and Product Purchase journey
 
-Automated test suite for the SauceDemo e-commerce website. This project demonstrates UI testing workflows.
+Automated test suite for the SauceDemo e-commerce website. 
 ## Table of Contents
 **Features**
 
@@ -50,12 +50,12 @@ Automated test suite for the SauceDemo e-commerce website. This project demonstr
 
 *WDIo*
 
-```npm init -y```
+```npm init -y
 
-```npm i --save-dev @wdio/cli```
+   npm i --save-dev @wdio/cli
 
-```npm init wdio@latest .```
-
+   npm init wdio@latest .
+```
 *Allure*
 
 ```npm install @wdio/allure-reporter --save-dev```

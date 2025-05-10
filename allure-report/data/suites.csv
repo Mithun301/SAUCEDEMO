@@ -1,4 +1,7 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3226","Try LogIn and verify the message ","","Sat May 10 12:25:39 BDT 2025","passed","Sat May 10 12:25:42 BDT 2025","","SauceDemo site Automation journey","",""
 "","3336","Try LogIn and verify the message ","","Thu May 08 17:45:57 BDT 2025","passed","Thu May 08 17:46:00 BDT 2025","","SauceDemo site Automation journey","",""
-"","42041"," LogIn and Product Purchase1 ","","Thu May 08 17:45:57 BDT 2025","passed","Thu May 08 17:46:39 BDT 2025","","SauceDemo site Automation journey","",""
+"","34592"," LogIn and Product Purchase ","","Sat May 10 12:25:42 BDT 2025","passed","Sat May 10 12:26:16 BDT 2025","","SauceDemo site Automation journey","",""
 "","32168"," LogIn and Product Purchase ","","Thu May 08 17:45:58 BDT 2025","passed","Thu May 08 17:46:30 BDT 2025","","SauceDemo site Automation journey","",""
+"","35540"," LogIn and Product Purchase1 ","","Sat May 10 12:26:16 BDT 2025","passed","Sat May 10 12:26:52 BDT 2025","","SauceDemo site Automation journey","",""
+"","42041"," LogIn and Product Purchase1 ","","Thu May 08 17:45:57 BDT 2025","passed","Thu May 08 17:46:39 BDT 2025","","SauceDemo site Automation journey","",""

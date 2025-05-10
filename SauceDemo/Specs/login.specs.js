@@ -1,7 +1,8 @@
-const utility = require("../../Utility/utility");
 const loginActions = require("../Pages/login/loginActions");
 const UserName = 'locked_out_user';
 const Password = 'secret_sauce';
+const extra = require("../Extra/extra");
+
 
 
 describe("SauceDemo site Automation journey", () => {
@@ -9,6 +10,6 @@ describe("SauceDemo site Automation journey", () => {
         await loginActions.enterUserName(UserName);
         await loginActions.enterpassword(Password);
         await loginActions.clickLogin();
-        await utility.verifyErrorMessage();
+        await extra.verifyErrorMessage();
     });
 });
