@@ -92,13 +92,15 @@ Automated test suite for the SauceDemo e-commerce website.
 
 *WDIo*
 
-``` npx wdio run ./wdio.conf.js
+```  npx wdio run ./wdio.conf.js
+
 ```
 
 
 *Report*
 
 ``` allure generate  allure-results --clean && allure open allure-report
+
 ```
 
 
