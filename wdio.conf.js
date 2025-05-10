@@ -30,12 +30,12 @@ exports.config = {
         
    },
 
-    specs: [
+  //  specs: [
 
       //  'SauceDemo/Specs/login.specs.js'
         //'SauceDemo/Specs/productPurchase.specs.js'
       // 'SauceDemo/Specs/productPurchase1.spec.js'
-    ],
+   // ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
