@@ -1,0 +1,1 @@
+{"uuid":"c90f48d9-01b7-468d-bb48-71e0f0a1dae6","children":["f7cb1d37-8762-42ef-9b57-30f1e4c559a5","f8050351-a44e-4fe0-ac14-5ce5c4a02761"],"befores":[],"afters":[],"name":"getProxyForUrl: NPM proxy configuration: HTTP_PROXY and HTTPS_PROXY should take precedence over npm_config_proxy"}

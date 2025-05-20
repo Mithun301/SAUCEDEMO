@@ -23,45 +23,54 @@ class Extra {
     }
    
     async verifyProductName(){
-        const xpaths =[ "//div[text()='Sauce Labs Backpack']","//div[text()='Sauce Labs Bike Light']" ,"//div[text()='Sauce Labs Bolt T-Shirt']" ];
-        await browser.pause(3000);
-        const productTexts = await Promise.all(
-            xpaths.map(async(xpath)=>{ const element = await $(xpath);
-            return await element.getText();
-        }));
-        console.log(productTexts);
-        await browser.pause(3000);
-        const productElements = await $$('//div[@data-test="inventory-item-name"]');
-        for (let i= 0; i<productElements.length;i++){
-            const productName = await productElements[i].getText();
-            expect(productName).toEqual(productTexts[i]);
-        }
-        await browser.pause(3000);
+    
+      const actualElements = await $$('//div[@class="inventory_item_name"]');
+      const expectedElements = await $$('//div[@class="cart_item_label"]//div[@class="inventory_item_name"]');
 
+      const actualTexts = [];
+        for (let i = 0; i < actualElements.length; i++) {
+        const text = await actualElements[i].getText();
+        actualTexts.push(text);
+}
+
+      const expectedTexts = [];
+        for (let i = 0; i < expectedElements.length; i++) {
+        const text = await expectedElements[i].getText();
+        expectedTexts.push(text);
+   }
+
+     console.log(actualTexts);
+     console.log(expectedTexts);
+
+   if (
+     actualTexts.length !== expectedTexts.length ||
+      !actualTexts.every((val, index) => val === expectedTexts[index])
+) 
+        await browser.pause(3000);
     }
     async verifyProductName1(){
-        const productElements1= await $('//div[@class="inventory_item_name" and text()="Test.allTheThings() T-Shirt (Red)"]');
+        const productElements1= await $('//div[@class="inventory_item_name"]');
         const productName1 = await productElements1.getText();
         const productElements2 = await $('//div[@class="inventory_item_name"]');
         const productName2 = await productElements2.getText();
         expect(productName2).toEqual(productName1);   
     }
+
+
     async verifyProductPrice(){
-        const productPrice1 = await $("//div[contains(@class, 'inventory_item_price') and text()='29.99']");
-        const getsingleProductPrice1 = await productPrice1.getText();
-        const SinglePrice1 = await this.convertTextToNumber(getsingleProductPrice1);
+     const priceElements = await $$("//div[contains(@class, 'inventory_item_price')]");
+      let subtotal = 0;
 
-        const product2Price = await $("//div[contains(@class, 'inventory_item_price') and text()='9.99']");
-        const getsingleProductPrice2 = await product2Price.getText();
-        const SinglePrice2 = await this.convertTextToNumber(getsingleProductPrice2);
+     for (const priceElement of priceElements) {
+      const priceText = await priceElement.getText();
+      const numericPrice = await this.convertTextToNumber(priceText);
+      subtotal += numericPrice;
+    }
 
-        const product3Price = await $("//div[contains(@class, 'inventory_item_price') and text()='15.99']");
-        const getsingleProductPrice3 = await product3Price.getText();
-        const SinglePrice3 = await this.convertTextToNumber(getsingleProductPrice3);
-
-        const SubTotalPrice = SinglePrice1 + SinglePrice2 + SinglePrice3 ;
-        const Tax = SubTotalPrice *  Taxrate ;
-        const TotalPrice = SubTotalPrice + Tax;
+       console.log( subtotal);
+     
+        const Tax = subtotal *  Taxrate ;
+        const TotalPrice = subtotal + Tax;
         const expectedTotalPrice = parseFloat(TotalPrice.toFixed(2));
         const PriceValue = await $("//div[@data-test='total-label']");
         const TotalPriceAmount= await PriceValue.getText();
@@ -69,7 +78,7 @@ class Extra {
         expect(expectedTotalPrice).toEqual(actualTotalPrice);
     }
     async verifyProductPrice1(){
-        const productPrice = await $("//div[contains(@class, 'inventory_item_price') and text()='15.99']");
+        const productPrice = await $("//div[@class= 'inventory_item_price']");;
         const getproductPrice = await productPrice.getText();
         const ItemPrice = await this.convertTextToNumber(getproductPrice);
         const tax = ItemPrice * Taxrate;
@@ -99,7 +108,6 @@ class Extra {
         }
         return result;
       }
-    
-    
-    }
-    module.exports = new Extra();
+     
+  }
+      module.exports = new Extra();

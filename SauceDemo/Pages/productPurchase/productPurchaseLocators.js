@@ -14,24 +14,18 @@ class ProductPurchaseLocators{
     get Addproduct(){
         return $('//button[@data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]');
     }
+    get product(){
+        return $('//button[@class="btn btn_primary btn_small btn_inventory"]');
+    }
     get product1(){
         return $("//button[@data-test='add-to-cart-sauce-labs-backpack']");
-    }
-    get product1Price(){
-        return $("//div[text()='29.99']");
     }
     get product2(){
         return $("//button[@data-test='add-to-cart-sauce-labs-bike-light']");
     }
-    get product2Price(){
-        return $("//div[text()='9.99']");
-    }
    
     get product3(){
         return $('//button[@data-test="add-to-cart-sauce-labs-bolt-t-shirt"]');
-    }
-    get product3Price(){
-        return $("//div[contains(@class, 'inventory_item_price') and text()='15.99']");
     }
     get getTotalPrice(){
         return $("//div[@data-test='total-label']");

@@ -21,6 +21,8 @@ class ProductPurchaseActions{
     async productAdd(){
         await productPurchaseLocators.Addproduct.click();
     }
+
+    
     async AddProduct1(){
         await productPurchaseLocators.product1.click();
     }
