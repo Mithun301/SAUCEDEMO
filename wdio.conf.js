@@ -30,13 +30,13 @@ exports.config = {
         
    },
 
-    specs: [
+  //  specs: [
      
 
       //  'SauceDemo/Specs/login.specs.js'
-       // 'SauceDemo/Specs/productPurchase.specs.js'
+      //  'SauceDemo/Specs/productPurchase.specs.js'
        //'SauceDemo/Specs/productPurchase1.spec.js'
-    ],
+   // ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -63,9 +63,24 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
+   // capabilities: [{
+ //       browserName: 'chrome'
+  //  }],
     capabilities: [{
-        browserName: 'chrome'
-    }],
+     maxInstances: 1,
+    browserName: 'chrome',
+     'goog:chromeOptions': {
+    args: [
+      '--disable-save-password-bubble',
+      '--disable-infobars',
+    ],
+    prefs: {
+      'credentials_enable_service': false,
+      'profile.password_manager_enabled': false
+    }
+  }
+}],
+
 
     //
     // ===================
